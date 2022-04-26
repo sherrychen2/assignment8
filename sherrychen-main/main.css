@@ -1,0 +1,267 @@
+@import "reset.css";
+body {
+	background: #212222;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@media (min-width: 1080px) {
+    #contact ~ footer {
+        position: absolute;
+    }
+}
+
+h2 {
+  margin-top: 10px; 
+  margin-bottom: 7px; 
+  display:inline-block;
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+    footer {
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-bottom: 0;
+        bottom: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+:root {
+    --primary: rgb(255, 255, 255);
+    --underline: rgba(255, 255, 255);
+  }
+  
+  .hover span {
+    display: inline-block;
+    padding-top: 3px;
+  }
+  
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  
+    font-family: "Inter", neue-haas-unica, aktiv-grotesk, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  
+    background: var(--secondary);
+  }
+
+  .landing {
+    padding: 40px 30px 30px 40px;
+    display: grid;
+    grid-template-columns: 760px 1fr;
+    column-gap: 40px;
+  }
+  .about {
+    grid-column-start: 1;
+    width: 495px;
+    position: fixed;
+  }
+
+  ::selection {
+    color: none;
+    background: none;
+  }
+  /* For Mozilla Firefox */
+  ::-moz-selection {
+    color: none;
+    background: none;
+  }
+  
+  .indent {
+    margin-right: 28px;
+  }
+  
+  a,
+  p,
+  span {
+    color: var(--primary);
+    line-height: 1.5em;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    z-index: 0;
+    width: auto;
+  }
+  
+  b {
+    font-size: 19px;
+    color: var(--primary);
+    line-height: 1.5em;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    z-index: 0;
+    width: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--underline);
+  }
+  
+  .about a:hover,
+  footer a:hover {
+    opacity: 0.6;
+  }
+  
+  p {
+    cursor: default;
+  }
+  
+  .work {
+    grid-column-start: 2;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .hover {
+    width: 100%;
+    max-width: 1000px;
+    transform-origin: center top;
+    border-bottom: none;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0);
+    animation: loadIn 0.8s 1s forwards;
+    opacity: 0;
+  }
+  
+  .hover,
+  figure {
+    transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  figure {
+    margin-bottom: 30px;
+  }
+
+  figure:last-child {
+    margin-bottom: 70px;
+  }
+  
+  .about,
+  footer {
+    opacity: 0;
+    animation: loadIn 0.8s 0.5s forwards;
+  }
+  
+  .hover:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .hover:nth-child(2) {
+    animation-delay: 0.55s;
+  }
+  .hover:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .hover a {
+    text-decoration: none;
+  }
+  
+  .hover:hover > img {
+    box-shadow: 0 0 100x rgba(255, 255, 255, 0.1);
+  }
+  
+  figure:hover {
+    transform: scale(1.005);
+    opacity: 0.9;
+  }
+  
+  .hover video,
+  .hover img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+  }
+  
+  .hover span,
+  .hover b {
+    margin-top: 5px;
+    font-size: 15px;
+    letter-spacing: 0.003em;
+  }
+  
+  .hover span {
+    opacity: 0.5;
+  }
+  
+  footer {
+    position: fixed;
+    margin-top: 0px;
+    bottom: 30px;
+    width: 100%;
+  }
+  
+  @keyframes loadIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .landing {
+      grid-template-columns: 1fr;
+    }
+    .about {
+      position: static;
+      width: 100%;
+      max-width: 550px;
+    }
+    .work {
+      margin-top: 30px;
+      grid-column-start: 1;
+    }
+  
+    footer {
+      position: static;
+      margin-top: 50px;
+      bottom: none;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .landing {
+      padding: 32px 14px 14px 14px;
+      column-gap: 0;
+    }
+  
+    a,
+    p,
+    span,
+    b {
+      line-height: 1.4em;
+      font-size: 16px;
+      letter-spacing: 0em;
+    }
+  }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
