@@ -19,14 +19,23 @@
     <meta name="keywords" content="sherry, chen, sherrychen, sherrychen.me, portfolio, design, carnegie mellon, design, ux design, cmux" />
     <link rel="stylesheet" href="main.css" />
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+    </script>
 </head>
 <body class="index">
+    <div id="gradient" />
 
     <main class="landing">
         <article>
             <figure>
                 <a target="_blank" href="https://sherrychen.me/negotium" class="hover">
-                    <img alt="" src="img/negotium.png"/>
+                    <img alt="Image of Negotium Screens" src="img/negotium.png"/>
                     <span>
                     <b>NEGOTIUM</b> | Getting Women To Ask For More
                     </span>
@@ -34,7 +43,7 @@
             </figure>
             <figure>
                 <a target="_blank" href="https://sherrychen.me/Adulting-101" class="hover">
-                    <img alt="" src="img/30day.png"/>
+                    <img alt="Image of the 30-day Adulting Screens" src="img/30day.png"/>
                     <span>
                     <b>NEGOTIUM</b> | Getting Women To Ask For More
                     </span>
@@ -42,7 +51,7 @@
             </figure>
             <figure>
                 <a target="_blank" href="https://sherrychen.me/Rate-Setting-Tool" class="hover">
-                    <img alt="" src="img/gigprep.png"/>
+                    <img alt="Image of the Screens for GigPrep" src="img/gigprep.png"/>
                     <span>
                     <b>GENDER & FREELANCING</b> | Shrinking The Gender Wage Gap In Online Freelancing
                     </span>
@@ -50,7 +59,7 @@
             </figure>
             <figure>
                 <a target="_blank" href="https://sherrychen.me/mindterra" class="hover">
-                    <img alt="" src="img/mindterra.jpeg"/>
+                    <img alt="Image of MindTerra's website" src="img/mindterra.jpeg"/>
                     <span>
                     <b>MINDTERRA</b> | Promoting Mental Well-being Through Writing
                     </span>
@@ -66,16 +75,46 @@
                 <h2>Hi, I'm Sherry.</h2>
                 <br>
                 <b>Incoming Product Design Intern @ Yahoo!</b>
-                <p>
-                    I am a student doubling majoring in 
-                    <a class="information-systems" target="_blank" href="https://www.cmu.edu/information-systems/">Information Systems</a>
-                    and 
-                    <a class="hci" target="_blank" href="https://www.hcii.cmu.edu/">Human-Computer Interaction</a>
-                    at Carnegie Mellon University. 
-                    I use my interdisciplinary background in the visual arts and technology and my affinity for empathy to create impactful and beautiful products for social good and innovation.
-                    
-                </p>
-                <img alt="" src="img/sherry.png"/>
+                <hr>
+                <div id="accordion">
+                    <h3>About Me</h3>
+                    <div>
+                      <p>
+                        I am a student doubling majoring in 
+                        <a class="information-systems" target="_blank" href="https://www.cmu.edu/information-systems/">Information Systems</a>
+                        and 
+                        <a class="hci" target="_blank" href="https://www.hcii.cmu.edu/">Human-Computer Interaction</a>
+                        at Carnegie Mellon University. 
+                        I use my interdisciplinary background in the visual arts and technology and my affinity for empathy to create impactful and beautiful products for social good and innovation.
+                      </p>
+                    </div>
+                    <h3>Beyond Design</h3>
+                    <div>
+                      <p>
+                      I spent my childhood and teens in Brooklyn, New York. Now I am kickstarting my twenties in Pittsburgh :)
+                      Outside of work, I try to maintain my art practice! You can find me practicing illustration for my research project 30-day adulting, doodling in my sketchbook for fun, or on Figma!
+                      <br>
+                      
+                      </p>
+                    </div>
+                    <h3>Gratitude</h3>
+                    <div>
+                      <p>
+                      I owe a lot to the people who've supported me throughout my journey ~ Thank you!
+                      </p>
+                      <ul>
+                        <li>Laura Dabbish</li>
+                        <li>Allie Blaising</li>
+                        <li>Yann Thomas</li>
+                        <li>Stephanie Tseng</li>
+                      </ul>
+                    </div>
+                    <h3>A Fun Pic</h3>
+                    <div>
+                        <img alt="Image of a girl and a boy." src="img/sherry.png">
+                    </div>
+                  </div>
+                
                 
 
 
@@ -85,13 +124,15 @@
                 <span></span>
                 <div class="contact">
                     
-                    <a class="indent" target="_blank" href="mailto:chensherry12@gmail.com">Email</a>
-                    <a class="indent" target="_blank" href="https://www.linkedin.com/in/sherry-/">LinkedIn</a>
-                    <a class="indent" target="_blank" href="https://www.dropbox.com/s/4ftzu2tlb4ooamz/Chen_Sherry_Resume.pdf?dl=0">Resume</a>
+                    <a class="image" target="_blank" href="mailto:chensherry12@gmail.com">Email</a>
+                    <a class="image" target="_blank" href="https://www.linkedin.com/in/sherry-/">LinkedIn</a>
+                    <a class="image" target="_blank" href="https://www.dropbox.com/s/4ftzu2tlb4ooamz/Chen_Sherry_Resume.pdf?dl=0">Resume</a>
                 </div>
 
             </footer>
         </article>
     </main>
+
+    
 </body>
 </html>

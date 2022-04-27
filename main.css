@@ -10,6 +10,17 @@ body {
     }
 }
 
+#gradient
+{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul, li, h3 {
+  color: var(--primary);
+}
+
 h2 {
   margin-top: 10px; 
   margin-bottom: 7px; 
@@ -265,3 +276,7 @@ h2 {
 ::-webkit-scrollbar {
     display: none;
   }
+
+
+
+  
