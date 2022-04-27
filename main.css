@@ -277,6 +277,14 @@ h2 {
     display: none;
   }
 
+  html,
+body {
+  cursor: url("img/cursor.png"), auto !important;
+}
+
+
+
+
 
 
   
