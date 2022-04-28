@@ -1,1 +1,2 @@
-# sherrychen2.github.io
+a. Video
+b. Figma, website 
