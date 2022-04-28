@@ -1,32 +1,3 @@
-const img1 = document.querySelector(".img-1");
-          const img2 = document.querySelector(".img-2");
-          const img3 = document.querySelector(".img-3");
-          const img4 = document.querySelector(".img-4");
-          const img5 = document.querySelector(".img-5");
-    
-          document.addEventListener("mousemove", e => {
-            img1.setAttribute(
-              "style",
-              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
-            );
-            img2.setAttribute(
-              "style",
-              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
-            );
-            img3.setAttribute(
-              "style",
-              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
-            );
-            img4.setAttribute(
-              "style",
-              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
-            );
-            img5.setAttribute(
-              "style",
-              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
-            );
-});
-
 var step = 0;
 var colorInd = [0,1,2,3];
 var gradSpeed = 0.002;
@@ -77,6 +48,65 @@ var colors = new Array(
   
   setInterval(gradUpdate,10);
 
+  const img1 = document.querySelector(".img-1");
+          const img2 = document.querySelector(".img-2");
+          const img3 = document.querySelector(".img-3");
+          const img4 = document.querySelector(".img-4");
+          const img5 = document.querySelector(".img-5");
+    
+          document.addEventListener("mousemove", e => {
+            img1.setAttribute(
+              "style",
+              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
+            );
+            img2.setAttribute(
+              "style",
+              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
+            );
+            img3.setAttribute(
+              "style",
+              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
+            );
+            img4.setAttribute(
+              "style",
+              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
+            );
+            img5.setAttribute(
+              "style",
+              "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
+            );
+          });
+
+
+          document.addEventListener('DOMContentLoaded',function(event){
+            var dataText = [ "Hi, I'm Sherry Chen!", "I'm a Friend!", "I'm an Artist!", "I'm a Photographer!"];
+            
+            function typeWriter(text, i, fnCallback) {
+              if (i < (text.length)) {
+               document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+          
+                setTimeout(function() {
+                  typeWriter(text, i + 1, fnCallback)
+                }, 100);
+              }
+              else if (typeof fnCallback == 'function') {
+                setTimeout(fnCallback, 700);
+              }
+            }
+             function StartTextAnimation(i) {
+               if (typeof dataText[i] == 'undefined'){
+                  setTimeout(function() {
+                    StartTextAnimation(0);
+                  }, 20000);
+               }
+              if (i < dataText[i].length) {
+               typeWriter(dataText[i], 0, function(){
+                 StartTextAnimation(i + 1);
+               });
+              }
+            }
+            StartTextAnimation(0);
+          });
 
 
  
